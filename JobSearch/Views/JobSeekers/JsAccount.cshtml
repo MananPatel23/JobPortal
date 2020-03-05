@@ -1,0 +1,90 @@
+﻿@model JsAccount
+@{
+    ViewData["Title"] = "JsAccount";
+    Layout = "~/Views/Shared/_mstLayout.cshtml";
+}
+
+<head>
+    <style>
+
+
+
+
+        table {
+            -webkit-box-shadow: 2px 5px 11px 2px rgba(0,0,0,0.75);
+            box-shadow: 2px 5px 11px 2px rgba(0,0,0,0.75);
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div style="margin-top:140px;">
+        <h1 style="font-size:35px;font-family:Calibri;margin-left:450px;color:white;">Account details</h1>
+    </div>
+    <font size="5px" style="font-family:Calibri">
+        <div style="margin-top:12px;width:60%;margin-left:250px;" id="card">
+
+            @foreach (var item in Model.js)
+            {
+            <table style="margin-top:15px;width:100%;background-color:white;">
+                <tr>
+                    <td>Name:</td>
+                    <td>@item.JsName</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>@item.Email</td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>@item.City</td>
+                </tr>
+
+                <tr>
+                    <td>Gender:</td>
+                    <td>@item.Gender</td>
+                </tr>
+
+                <tr>
+                    <td>Mobile:</td>
+                    <td>@item.Mobile</td>
+                </tr>
+
+                <tr>
+                    <td>College Name:</td>
+                    <td>@item.CollegeName</td>
+                </tr>
+                <tr>
+                    <td>Degree:</td>
+                    <td>@item.Degree</td>
+                </tr>
+
+                <tr>
+                    <td>Category:</td>
+                    <td>@item.Category</td>
+                </tr>
+
+                <tr>
+                    <td>Experiance:</td>
+                    <td>@item.Experiance</td>
+                </tr>
+
+                <tr>
+                    <td>CGPA:</td>
+                    <td>@item.CGPA</td>
+                </tr>
+
+                <tr>
+                    <td>Passing Year:</td>
+                    <td>@item.PassingYear</td>
+                </tr>
+            </table>
+            }
+
+        </div>
+    </font>
+</body>
+

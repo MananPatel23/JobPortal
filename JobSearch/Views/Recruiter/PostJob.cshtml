@@ -1,0 +1,121 @@
+﻿@model PostedJob
+@{
+    ViewData["Title"] = "PostJob";
+    Layout = "~/Views/Shared/_RLayout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/FormStyle.css">
+</head>
+
+<div id="div1" style="background-color:white;">
+
+    <div id="div2">
+        <h1 align="center">Post new Job</h1>
+    </div>
+
+
+    <form asp-controller="Recruiter" asp-action="PostJob" align="center" method="post">
+
+        <table align="center" cellpadding="5" cellspacing="15" >
+
+
+           
+
+
+            <tr>
+                <td> Degree:</td>
+                <td>
+                    <input asp-for="Degree" placeholder="Enter  degree" name="Degree" maxlength="100"  required/>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> Category</td>
+                <td>
+                    <font size="3px" style="text-align:center;padding-left:10px">
+                        <select name="Job_Cat" asp-for="Job_Cat" style="border:none" required>
+                            <option placeholder="">Category</option>
+                            <option value="IT">IT</option>
+                            <option value="Finacial">Financial Services </option>
+                            <option value="Automobile">AutoMobile</option>
+                            <option value="Healthcare">HeathCare</option>
+                            <option value="Business">Business</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Marketing">Marketing</option>
+
+                        </select>
+                    </font>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> Skill</td>
+                <td>
+                    <input asp-for="Skill" name="Skill" maxlength="50" required/>
+
+                </td>
+
+            <tr>
+                <td> Job Title</td>
+                <td>
+                    <input asp-for="Job_Tit"  placeholder="Enter Job Title" name="Job_Tit" maxlength="2300" required/>
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Salary(Monthly)</td>
+                <td>
+                    <input type="number" asp-for="Salary" name="Salary" placeholder="Enter Salary" maxlength="7" required/>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>Vacancy</td>
+                <td>
+                    <input type="number" asp-for="Vacancy" name="Vacancy" placeholder="Enter Vacancy" required/>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> City</td>
+                <td>
+                    <input asp-for="City" placeholder="Enter City" name="City" required/>
+
+                </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <!----- Submit and Reset ------------------------------------------------->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" name="Submit" />
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+
+
+
+
+
+
+
+    <H2 id="error1"></H2>
+</div>

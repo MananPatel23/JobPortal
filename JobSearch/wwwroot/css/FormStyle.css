@@ -1,0 +1,118 @@
+﻿form {
+    align: center;
+    margin-top: 2%;
+}
+
+
+
+div#div1 {
+    width: 60%;
+    margin-top: 150px;
+    margin-left: 210px;
+    border: 1px solid black;
+    background-color: rgba(255,255,255,0.7);
+    font-family: "verdana";
+    border-color: black;
+    border-radius: 15px;
+}
+
+
+input[type=text], input[type=password], input[type=email], input[type=date], input[type=number],select,textarea {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+    font: normal 16px/normal "Lucida Console", Monaco, monospace;
+    color: rgba(0,142,198,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252,252,252,1);
+    -webkit-box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.2);
+    text-shadow: 4px 1px 0 rgba(255,255,255,0.66);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    outline: none;
+    width: 65%;
+    padding-top: 2%;
+    margin-top: 1%;
+}
+
+
+input[type=submit] {
+    width: 30%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 14px;
+    background-color: #28a745;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+#p1 {
+    margin-top: 5px;
+    font-size: 55px;
+    color: black;
+    font-family: algerian;
+}
+
+#div2 {
+    
+    height: 12%;
+}
+
+#error1 {
+    margin-left: 150px;
+    color: black;
+}
+
+footer {
+}
+
+#head1 {
+    font-family: Calibri;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    color: SlateBlue;
+    text-decoration: underline;
+    color: black;
+}
+
+table {
+    font-family: verdana;
+    color: black;
+    font-size: 13pt;
+    font-style: normal;
+    text-align: 14pt;
+    background-color: rgba(255,255,255,0.9);
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+    table.inner {
+        border: 0px
+    }
+
+div#logindiv1 {
+    width: 45%;
+    margin-top: 120px;
+    margin-left: 250px;
+    border: 1px solid black;
+    background-color: rgba(255,255,255,0.7);
+    font-family: "verdana";
+    border-color: black;
+    border-radius: 15px;
+}

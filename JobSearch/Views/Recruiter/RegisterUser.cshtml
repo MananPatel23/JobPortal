@@ -1,0 +1,117 @@
+﻿@model Recruiter
+@{
+    ViewData["Title"] = "RecRegister";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <head>
+        <link rel="stylesheet" href="~/css/FormStyle.css">
+        <script>
+
+            function checkForm(form) {
+               
+            }
+
+        </script>
+    </head>
+
+<div id="div1">
+
+    <div id="div2" style="background-color:#28a745;height:50px; border:none;border-radius:inherit;padding-top:6px;">
+        <center><font color="white" style="font-family:'Century Gothic';"><h1>Recruiter Register Here</h1></font></center>
+    </div>
+
+
+    <form  asp-controller="Recruiter" asp-action="RegisterUser" align="center" method="post">
+
+        <table align="center" cellpadding="2" cellspacing="15"  style="background-color:transparent">
+
+            <tr>
+                <td> Comapny Name</td>
+                <td>
+                    <input asp-for="CName" placeholder="Enter Comapny  name" name="CName" maxlength="30"  required/>
+                    
+
+                </td>
+            </tr>
+            <tr>
+                <td> City</td>
+                <td>
+                    <input  asp-for="City" placeholder="Enter City" name="City" maxlength="20" pattern="[a-zA-Z]+" required/>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> Address:</td>
+                <td>
+                    <input asp-for="Address" placeholder="Enter your Add" name="Address" maxlength="1000"   required/>
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td> Pincode</td>
+                <td>
+                    <input type="number" asp-for="Pincode" placeholder="Enter your Pincode" name="Pincode" pattern="[0-9]{6}"  required />
+
+                </td>
+            </tr>
+
+
+
+
+            <!----- Email Id ---------------------------------------------------------->
+            <tr>
+                <td>EMAIL ID</td>
+                <td><input asp-for="Email" name="Email" placeholder="Enter your Email id" maxlength="100"  required /></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" asp-for="Password" name="password" placeholder="Enter your Password" maxlength="100" required /></td>
+            </tr>
+
+
+
+
+            <!----- Mobile Number ---------------------------------------------------------->
+            <tr>
+                <td>Contact Number</td>
+                <td>
+                    <input asp-for="Mobile" name="Mobile" placeholder="Enter Mobile_Number" maxlength="10" pattern=""  required  />
+
+                </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <!----- Submit and Reset ------------------------------------------------->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" name="Submit" onclick="return checkForm(this)">
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+
+
+
+
+
+
+
+    <H2 id="error1"></H2>
+</div>
+
+
+

@@ -1,0 +1,84 @@
+﻿
+@model List<PostedJob> 
+@{
+    ViewData["Title"] = "PostedJob";
+    Layout = "~/Views/Shared/_RLayout.cshtml";
+}
+
+<head>
+    <style>
+
+
+
+
+        table {
+            -webkit-box-shadow: 2px 5px 11px 2px rgba(0,0,0,0.75);
+            box-shadow: 2px 5px 11px 2px rgba(0,0,0,0.75);
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <div style="margin-top:140px;">
+        <h1 style="font-size:35px;font-family:Calibri;margin-left:450px;color:white">Posted jobs</h1>
+    </div>
+
+    <div style="margin-top:12px;width:60%;margin-left:250px;" id="card">
+        <font size="5px" style="font-family:Calibri">
+
+            @foreach (var postedJob in Model)
+            {
+
+         
+
+            <table style="margin-top:15px;width:100%;background-color:white;">
+                <tr style="padding-left:5px;background-color:antiquewhite; align-content:center;">
+
+                    <td colspan="2" align="center">@postedJob.CName</td>
+                    
+
+                </tr>
+                <tr>
+                    <td style="padding-left:5px" width="175px">Skill Required:</td>
+                    <td style="padding-left:20px;">@postedJob.Skill</td>
+                </tr>
+
+
+
+                <tr>
+                    <td style="padding-left:5px">No Of Vacancy:</td>
+                    <td style="padding-left:20px">@postedJob.Vacancy</td>
+                </tr>
+
+                <tr>
+                    <td style="padding-left:5px">Job Title:</td>
+                    <td style="padding-left:20px">@postedJob.Job_Tit</td>
+                </tr>
+
+                <tr>
+                    <td style="padding-left:5px">Entry date:</td>
+                    <td style="padding-left:20px">@postedJob.Ent_date</td>
+                </tr>
+
+                
+
+                <tr>
+                    <td style="margin-left:100px">@Html.ActionLink("Remove Post","removepost","Recruiter",routeValues:new PostedJob { JobId=postedJob.JobId,RecId=postedJob.RecId})</td>
+                </tr>
+
+
+
+
+            </table>
+
+             
+            }
+        </font>
+    </div>
+</body>
+
+

@@ -1,0 +1,122 @@
+﻿@model EduProfile
+@{
+    ViewData["Title"] = "JobSeekerEduPro";
+    Layout = "~/Views/Shared/_MstLayout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/FormStyle.css">
+</head>
+
+<div id="div1" style="background-color:white;">
+
+    <div id="div2">
+        <h1 align="center">Education Profile</h1>
+        <h1>@ViewBag.jsid</h1>
+    </div>
+
+
+    <form asp-controller="JobSeekers" asp-action="Edu" align="center" method="post">
+
+        <table align="center" cellpadding="2" cellspacing="15">
+
+            <tr>
+                <td> College Name:</td>
+                <td>
+                    <input asp-for="CollegeName" placeholder="Enter college Name" name="CollegeName"  maxlength="50"  />
+
+                </td>
+            </tr>
+            
+            <tr>
+                <td> Degree:</td>
+                <td>
+                    <input asp-for="Degree" placeholder="Enter your degree" name="Degree"  maxlength="100"  />
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> Category</td>
+                <td>
+                    <font size="3px" style="text-align:center;padding-left:10px">
+                        <select  name="Category" asp-for="Category" style="height:68px;border:none" >
+                            <option placeholder="">Category</option>
+                            <option value="IT">IT</option>
+                            <option value="Finacial">Financial Services </option>
+                            <option value="Automobile">AutoMobile</option>
+                            <option value="Healthcare">HeathCare</option>
+                            <option value="Business">Business</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Marketing">Marketing</option>
+
+                        </select>
+                    </font>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> Skill</td>
+                <td>
+                    <input  asp-for="Skill" name="Skill"placeholder="Input Your Skills"   />
+
+                </td>
+
+            <tr>
+                <td> Passing Year</td>
+                <td>
+                    <input type="number" asp-for="Passing_Year"   placeholder="Enter Passing year" name="Passing_Year" min="1990" max="2019" maxlength="4" />
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> Experiance</td>
+                <td>
+                    <input type="number" asp-for="Experiance" placeholder="Enter Experiance in Year" name="Experiance" min="0" max="50" maxlength="2" />
+
+                </td>
+            </tr>
+
+           
+            <tr>
+                <td>CGPA</td>
+                <td>
+                    <input type="number" asp-for="CGPA" name="CGPA" placeholder="Enter your CGPA" min="0.0" max="10.0" step="0.01" />
+
+                </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <!----- Submit and Reset ------------------------------------------------->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" name="Submit" />
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+
+
+
+
+
+
+
+    <H2 id="error1"></H2>
+</div>
+
+
+

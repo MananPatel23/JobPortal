@@ -1,0 +1,120 @@
+﻿@model JobSeeker
+@{
+    ViewData["Title"] = "JobSeekerRegister";
+    
+     
+}
+    <head>
+        <link rel="stylesheet" href="~/css/FormStyle.css">
+    </head>
+
+    <div id="div1" >
+
+        <div id="div2"  style="background-color:#28a745;height:50px; border:none;border-radius:inherit;padding-top:6px;">
+            <center><font color="white" style="font-family:'Century Gothic';"><h1>JobSeeker Register Here</h1></font></center>
+        </div>
+
+
+        <form asp-action="RegisterUser" align="center" method="post">
+
+            <table align="center" cellpadding="2" cellspacing="15"   style="background-color:transparent">
+
+                <tr>
+                    <td> Name:</td>
+                    <td>
+                        <input asp-for="Name" placeholder="Enter your  name" name="Name" maxlength="30" required/>
+                        
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> City:</td>
+                    <td>
+                        <input asp-for="City" placeholder="Enter your  City" name="City" maxlength="30" pattern="[a-zA-Z]+" required/>
+
+                    </td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td> Pincode</td>
+                    <td>
+                        <input type="number" asp-for="Pincode" placeholder="Enter your Pincode" name="Pincode" maxlength="6" required/>
+
+                    </td>
+                </tr>
+                <!----- Date Of Birth -------------------------------------------------------->
+                <tr>
+                    <td>DATE OF BIRTH</td>
+
+                    <td>
+
+                        <input type="Date" asp-for="Dob" name="dob">
+
+                    </td>
+                </tr>
+
+                <!----- Email Id ---------------------------------------------------------->
+                <tr>
+                    <td>EMAIL ID</td>
+                    <td><input asp-for="Email" name="Email" placeholder="Enter your Email id" maxlength="100"  required /></td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" asp-for="Password" name="password" placeholder="Enter your Password" maxlength="100" required /></td>
+                </tr>
+
+                <!----- Mobile Number ---------------------------------------------------------->
+                <tr>
+                    <td>MOBILE NUMBER</td>
+                    <td>
+                        <input name="Mobile" asp-for="Mobile" placeholder="Enter your Mobile_Number" maxlength="10"  pattern="/(6|7|8|9)\d{9}/" required />
+
+                    </td>
+                </tr>
+
+                <!----- Gender ----------------------------------------------------------->
+                <tr>
+                    <td>GENDER</td>
+                    <td>
+                        <label>
+                            Male <input type="radio" asp-for="Gender" name="Gender" value="Male" />
+                        </label><label>
+                            Female <input type="radio" asp-for="Gender" name="Gender" value="Female" />
+                        </label>
+                    </td>
+                </tr>
+
+
+
+
+
+
+
+
+                <!----- Submit and Reset ------------------------------------------------->
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit" name="Submit">
+                    </td>
+                </tr>
+            </table>
+
+
+        </form>
+
+
+
+        
+
+
+
+        <H2 id="error1"></H2>
+    </div>
+
+

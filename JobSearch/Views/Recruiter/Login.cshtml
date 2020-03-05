@@ -1,0 +1,34 @@
+﻿@model Recruiter
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/css/FormStyle.css">
+</head>
+
+<div id="login">
+    
+    <div id="logindiv1" style="margin-top:150px;">
+        <div id="logindiv2" style="background-color:#28a745;height:50px; border:none;border-radius:inherit;padding-top:6px;">
+            <center><font color="white" style="font-family:'Century Gothic';"><h1>Recruiter Login Here</h1></font></center>
+        </div>
+        <form asp-controller="Recruiter" asp-action="Login" align="center">
+
+            <font size=5px font color="black">
+
+                Email<br><input type="email" asp-for="Email" name="Email"  placeholder="Enter your Email"><br>
+                Password<br><input type="password" asp-for="Password" name="Password"  placeholder="Enter your Password"><br>
+
+                <input type="submit" name="Submit" value="Login" class="button">
+            </font>
+
+
+        </form>
+    </div>
+
+
+</div>
+

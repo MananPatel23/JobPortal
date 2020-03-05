@@ -1,0 +1,36 @@
+﻿@model JobSeeker
+@{
+    ViewData["Title"] = "JobSeekerLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+   
+    <head>
+        <link rel="stylesheet" href="~/css/FormStyle.css">
+    </head>
+
+    <div id="login">
+
+        <div id="logindiv1" style="margin-top:150px">
+            <div id="logindiv2" style="background-color:#28a745;height:50px; border:none;border-radius:inherit;padding-top:6px;">
+                <center><font color="white" style="font-family:'Century Gothic';"><h1>JobSeeker Login Here</h1></font></center>
+            </div>
+
+           
+                <form asp-action="JobSeekerLogin" align="center" method="post">
+
+                    <font size=5px font color="black">
+
+                        Email<br><input  asp-for="Email" name="Email" value="" placeholder="Enter your Email" required><br>
+                        Password<br><input type="password" asp-for="Password" name="Password" value="" placeholder="Enter your Password" required><br>
+
+                        <input type="submit" name="Submit" value="Login" class="button">
+                    </font>
+
+
+                </form>
+            
+
+
+        </div>
+
+</div>

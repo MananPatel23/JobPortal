@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JobSearch</title>
+
+    <environment include="Development">
+
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/main.css">
+        <script src="~/lib/jquery.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet" asp-append-version="true">
+        <link rel="stylesheet" href="~/fonts/icomoon/style.css">
+
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/jquery-ui.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/owl.carousel.min.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/owl.theme.default.min.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/bootstrap-datepicker.css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/animate.css" asp-append-version="true">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css" asp-append-version="true">
+
+
+
+        <link rel="stylesheet" href="~/fonts/flaticon/font/flaticon.css" asp-append-version="true">
+
+        <link rel="stylesheet" href="~/css/aos.css" asp-append-version="true">
+
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+</head>
+<body style="background-image:url(/images/hero_1.jpg);background-attachment:fixed;background-repeat:no-repeat;background-size:cover;">
+
+    
+
+
+        <div class="site-navbar-wrap js-site-navbar bg-white" style="margin-top:0px">
+
+            <div class="container">
+                <div class="site-navbar bg-light">
+                    <div class="py-1">
+                        <div class="row align-items-center">
+                            <div class="col-2">
+                                <h2 class="mb-0 site-logo"><a href="index.html">Job<strong class="font-weight-bold">Search</strong> </a></h2>
+                            </div>
+                            <div class="col-10">
+                                <nav class="site-navigation text-right" role="navigation">
+                                    <div class="container">
+                                        <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+                                        <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                            <li class="has-children">
+                                                
+                                                
+
+
+                                            </li>
+                                            <li class="has-children">
+                                                
+                                                
+                                            </li>
+                                            <li><a asp-controller="Home" asp-action="Index" asp-area="">Home</a></li>
+                                            <li><a asp-controller="Recruiter" asp-action="Login"><span class="bg-primary text-white py-3 px-4 rounded"><span class="icon-plus mr-3"></span>Post New Job</span></a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <partial name="_CookieConsentPartial" />
+    
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" style="position:fixed">
+
+            <li>
+                <a asp-controller="JobSeekers" asp-action="JsAccount" asp-area="">My Account</a>
+            </li>
+            <li>
+                <a asp-controller="JobSeekers" asp-action="JobSeekerEduPro" asp-area="">Education profile</a>
+            </li>
+            <li>
+                <a asp-controller="JobSeekers" asp-action="Search1">Job Match</a>
+            </li>
+            <li>
+                <a asp-controller="JobSeekers" asp-action="appliedjobs">Applied Jobs</a>
+            </li>
+
+            <li>
+                <a href="#">Upload Resume</a>
+            </li>
+
+            <li>
+                <a href="#">Change Password</a>
+            </li>
+            <li>
+                <a asp-controller="JobSeekers" asp-action="Logout">Logout</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+
+
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+

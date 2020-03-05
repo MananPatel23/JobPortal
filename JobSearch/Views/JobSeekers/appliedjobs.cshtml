@@ -1,0 +1,50 @@
+﻿@model AppliedJobDetails
+@{
+    ViewData["Title"] = "appliedjobs";
+    Layout = "~/Views/Shared/_mstLayout.cshtml";
+}
+    <head>
+        <style>
+
+
+
+
+            table {
+                -webkit-box-shadow: 2px 5px 11px 2px rgba(0,0,0,0.75);
+                box-shadow: 2px 5px 11px 2px rgba(0,0,0,0.75);
+            }
+        </style>
+
+
+
+    </head>
+
+    <body>
+        <div style="margin-top:140px;">
+            <h1 style="font-size:35px;font-family:'Century Gothic';margin-left:450px;color:White">Applied Job details</h1>
+        </div>
+        <font size="5px" style="font-family:Calibri">
+            <div style="margin-top:12px;margin-left:150px;"  id="card">
+
+                @foreach (var item in Model.details)
+                {
+                    <table style="margin-top:15px;width:100%;background-color:white;">
+                        <tr>
+                            <td>Company Name:</td>
+                            <td>@item.ComapanyName</td>
+                        </tr>
+                        <tr>
+                            <td>Job Title:</td>
+                            <td>@item.Job_Title</td>
+                        </tr>
+                        <tr>
+                            <td>Applied On:</td>
+                            <td>@item.Ent_date</td>
+                        </tr>
+
+                    </table>
+                }
+
+            </div>
+        </font>
+    </body>
